@@ -1,4 +1,0 @@
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/Helloworld.dir
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/INSTALL.dir
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/ZERO_CHECK.dir
