@@ -1,5 +1,7 @@
 /*Enter your code here. Read input from STDIN. Print your output to STDOUT*/
 #include <iostream>
+#include <memory>
+
 using namespace std;
 
 class vehicle
