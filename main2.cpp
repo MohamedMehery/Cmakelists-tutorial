@@ -9,9 +9,9 @@ class vehicle
     protected:
         int number_of_tyres;
     public:
-        void Display(void)
+         void Display(void)
         {
-            cout << "this is a vehicle" << endl;
+            cout << "\nthis is a vehicle\n" << endl;
         }
 };
 
@@ -33,7 +33,7 @@ class car : public vehicle
     public:
         void Display(void)
         {
-            cout << "this is a car" << endl;
+            cout << "\nthis is a car\n" << endl;
         }
         void set_num_of_tyres(int n)
         {
@@ -44,9 +44,10 @@ class car : public vehicle
 int main()
 {
 	//Write code here
-	unique_ptr<car> cptr1 (new car);
+	//unique_ptr<car> cptr1 (new car);
+    vehicle *cptr1 ;
+    car c1;
+    cptr1 = &c1; 
     cptr1->Display();
-
-
 
 }
