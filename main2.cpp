@@ -45,9 +45,10 @@ int main()
 {
 	//Write code here
 	//unique_ptr<car> cptr1 (new car);
-    vehicle *cptr1 ;
+
+    unique_ptr<vehicle> vptr1( new vehicle);
     car c1;
-    cptr1 = &c1; 
-    cptr1->Display();
+    //vptr1 = move(&c1); //error can't copy unique_ptr
+    vptr1->Display();
 
 }
