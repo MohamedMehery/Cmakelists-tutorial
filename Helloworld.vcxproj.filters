@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\CMakelists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FA449AD9-64B9-3C4C-8BF0-F26E734D2087}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
