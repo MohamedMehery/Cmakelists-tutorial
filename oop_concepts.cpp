@@ -53,12 +53,13 @@ int main()
 	//unique_ptr<car> cptr1 (new car);
 
     unique_ptr<vehicle> vptr1( new vehicle);
+    unique_ptr<vehicle> vptr2 = move(vptr1);
     car c1;
     car c2;
     c2.set_num_of_tyres(5);
     c1 = c2;
     c1.Display();
-    //vptr1 = move(&c1); //error can't copy unique_ptr
-    vptr1->Display();
+    //vptr1 = move(vpre1); //error can't copy unique_ptr
+    vptr2->Display();
 
 }
