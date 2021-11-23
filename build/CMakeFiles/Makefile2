@@ -62,7 +62,7 @@ CMAKE_BINARY_DIR = "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/Helloworld.dir/all
+all: CMakeFiles/cmake-tutorial.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -70,34 +70,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/Helloworld.dir/clean
+clean: CMakeFiles/cmake-tutorial.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Helloworld.dir
+# Target rules for target CMakeFiles/cmake-tutorial.dir
 
 # All Build rule for target.
-CMakeFiles/Helloworld.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Helloworld.dir\build.make CMakeFiles/Helloworld.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Helloworld.dir\build.make CMakeFiles/Helloworld.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=1,2 "Built target Helloworld"
-.PHONY : CMakeFiles/Helloworld.dir/all
+CMakeFiles/cmake-tutorial.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=1,2 "Built target cmake-tutorial"
+.PHONY : CMakeFiles/cmake-tutorial.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Helloworld.dir/rule: cmake_check_build_system
+CMakeFiles/cmake-tutorial.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Helloworld.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/cmake-tutorial.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 0
-.PHONY : CMakeFiles/Helloworld.dir/rule
+.PHONY : CMakeFiles/cmake-tutorial.dir/rule
 
 # Convenience name for target.
-Helloworld: CMakeFiles/Helloworld.dir/rule
-.PHONY : Helloworld
+cmake-tutorial: CMakeFiles/cmake-tutorial.dir/rule
+.PHONY : cmake-tutorial
 
 # clean rule for target.
-CMakeFiles/Helloworld.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Helloworld.dir\build.make CMakeFiles/Helloworld.dir/clean
-.PHONY : CMakeFiles/Helloworld.dir/clean
+CMakeFiles/cmake-tutorial.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/clean
+.PHONY : CMakeFiles/cmake-tutorial.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

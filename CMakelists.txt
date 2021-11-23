@@ -1,12 +1,10 @@
 cmake_minimum_required(VERSION "3.20.5")
 
-project("Helloworld")
+project("cmake-tutorial")
+
+add_executable("${PROJECT_NAME}" "src/main.cpp")
 
 
-add_executable("${PROJECT_NAME}" "main.cpp")
-
-
-install(TARGETS  "${PROJECT_NAME}" DESTINATION bin) #bin is relative path and full path will looks ${CMAKE_INSTALL_PREFIX}/bin
+install(TARGETS  "${PROJECT_NAME}" DESTINATION build) #build is relative path and full path will looks ${CMAKE_INSTALL_PREFIX}/build
 
 install(FILES "main.cpp" DESTINATION src) #${CMAKE_INSTALL_PREFIX}/src
-

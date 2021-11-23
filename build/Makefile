@@ -161,41 +161,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Helloworld
+# Target rules for targets named cmake-tutorial
 
 # Build rule for target.
-Helloworld: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Helloworld
-.PHONY : Helloworld
+cmake-tutorial: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 cmake-tutorial
+.PHONY : cmake-tutorial
 
 # fast build rule for target.
-Helloworld/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Helloworld.dir\build.make CMakeFiles/Helloworld.dir/build
-.PHONY : Helloworld/fast
+cmake-tutorial/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/build
+.PHONY : cmake-tutorial/fast
 
-main.obj: main.cpp.obj
-.PHONY : main.obj
+src/main.obj: src/main.cpp.obj
+.PHONY : src/main.obj
 
 # target to build an object file
-main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Helloworld.dir\build.make CMakeFiles/Helloworld.dir/main.cpp.obj
-.PHONY : main.cpp.obj
+src/main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj
+.PHONY : src/main.cpp.obj
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Helloworld.dir\build.make CMakeFiles/Helloworld.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Helloworld.dir\build.make CMakeFiles/Helloworld.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -209,10 +209,10 @@ help:
 	@echo ... install/strip
 	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... Helloworld
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
+	@echo ... cmake-tutorial
+	@echo ... src/main.obj
+	@echo ... src/main.i
+	@echo ... src/main.s
 .PHONY : help
 
 
