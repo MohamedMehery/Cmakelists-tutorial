@@ -21,23 +21,13 @@ TEST(AccountTest, BankAccountStartEmpty)
 	EXPECT_EQ(0, account.balance);
 }*/
 
-int main(int argc, char * argv[])
+int main( int argc , char* argv[])
 {
 	//testing::InitGoogleTest(&argc, argv);
-	//return RUN_ALL_TESTS();
-	string Name;
-	Name = "\tMOHAMED";
-	cout << Name << endl;
-	Name = "\tMohamed";
-	cout << Name << endl;	
-	Name += " Mehery";
-	cout << Name << endl;
-	char name[] = {"\tMOHAMED "};
-	cout << name << endl;
-	cout <<'\t'<< sizeof(name) << "	" << Name.size() << endl;
+	//return RUN_ALL_TESTS(); 
+	if (argc > 1)
+		return 1;
+
+	cout << "Hello world!" << endl;
 	return 0;
 }
-
-
-
-

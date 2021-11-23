@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION "3.20.5")
+cmake_minimum_required(VERSION "3.10.1")
 
 project("cmake-tutorial")
 
@@ -8,3 +8,8 @@ add_executable("${PROJECT_NAME}" "src/main.cpp")
 install(TARGETS  "${PROJECT_NAME}" DESTINATION build) #build is relative path and full path will looks ${CMAKE_INSTALL_PREFIX}/build
 
 install(FILES "main.cpp" DESTINATION src) #${CMAKE_INSTALL_PREFIX}/src
+
+include(CTest)
+
+add_test("test1" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}") #the cmake variable CMAKE_CURRENT_BINARY_DIR points to the build directory and $ is to dereference the variable
+add_test("test2" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}" "anyparameter")

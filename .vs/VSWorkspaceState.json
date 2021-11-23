@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\build\\CMakeFiles\\3.20.5",
+    "\\build\\CMakeFiles\\3.20.5\\CompilerIdC",
+    "\\build\\CMakeFiles\\3.20.5\\CompilerIdCXX",
+    "\\build\\CMakeFiles\\cmake-tutorial.dir",
     "\\src"
   ],
-  "SelectedNode": "\\CMakelists.txt",
+  "SelectedNode": "\\CMakeLists.txt",
   "PreviewInSolutionExplorer": false
 }
