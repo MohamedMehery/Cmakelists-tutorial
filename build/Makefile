@@ -64,42 +64,6 @@ CMAKE_BINARY_DIR = "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
-.PHONY : install/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -119,15 +83,6 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -173,6 +128,30 @@ cmake-tutorial/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/build
 .PHONY : cmake-tutorial/fast
 
+src/gtest-example.obj: src/gtest-example.cpp.obj
+.PHONY : src/gtest-example.obj
+
+# target to build an object file
+src/gtest-example.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.obj
+.PHONY : src/gtest-example.cpp.obj
+
+src/gtest-example.i: src/gtest-example.cpp.i
+.PHONY : src/gtest-example.i
+
+# target to preprocess a source file
+src/gtest-example.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.i
+.PHONY : src/gtest-example.cpp.i
+
+src/gtest-example.s: src/gtest-example.cpp.s
+.PHONY : src/gtest-example.s
+
+# target to generate assembly for a file
+src/gtest-example.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.s
+.PHONY : src/gtest-example.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -197,6 +176,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/new-delete.obj: src/new-delete.cpp.obj
+.PHONY : src/new-delete.obj
+
+# target to build an object file
+src/new-delete.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.obj
+.PHONY : src/new-delete.cpp.obj
+
+src/new-delete.i: src/new-delete.cpp.i
+.PHONY : src/new-delete.i
+
+# target to preprocess a source file
+src/new-delete.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.i
+.PHONY : src/new-delete.cpp.i
+
+src/new-delete.s: src/new-delete.cpp.s
+.PHONY : src/new-delete.s
+
+# target to generate assembly for a file
+src/new-delete.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.s
+.PHONY : src/new-delete.cpp.s
+
+src/oop_concepts.obj: src/oop_concepts.cpp.obj
+.PHONY : src/oop_concepts.obj
+
+# target to build an object file
+src/oop_concepts.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.obj
+.PHONY : src/oop_concepts.cpp.obj
+
+src/oop_concepts.i: src/oop_concepts.cpp.i
+.PHONY : src/oop_concepts.i
+
+# target to preprocess a source file
+src/oop_concepts.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.i
+.PHONY : src/oop_concepts.cpp.i
+
+src/oop_concepts.s: src/oop_concepts.cpp.s
+.PHONY : src/oop_concepts.s
+
+# target to generate assembly for a file
+src/oop_concepts.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.s
+.PHONY : src/oop_concepts.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -204,15 +231,20 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
-	@echo ... install
-	@echo ... install/local
-	@echo ... install/strip
-	@echo ... list_install_components
 	@echo ... rebuild_cache
 	@echo ... cmake-tutorial
+	@echo ... src/gtest-example.obj
+	@echo ... src/gtest-example.i
+	@echo ... src/gtest-example.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/new-delete.obj
+	@echo ... src/new-delete.i
+	@echo ... src/new-delete.s
+	@echo ... src/oop_concepts.obj
+	@echo ... src/oop_concepts.i
+	@echo ... src/oop_concepts.s
 .PHONY : help
 
 

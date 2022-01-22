@@ -80,12 +80,12 @@ clean: CMakeFiles/cmake-tutorial.dir/clean
 CMakeFiles/cmake-tutorial.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=1,2 "Built target cmake-tutorial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=1,2,3,4,5 "Built target cmake-tutorial"
 .PHONY : CMakeFiles/cmake-tutorial.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cmake-tutorial.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/cmake-tutorial.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 0
 .PHONY : CMakeFiles/cmake-tutorial.dir/rule

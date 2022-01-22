@@ -1,7 +1,3 @@
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/install/strip.dir
 C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/cmake-tutorial.dir
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/install/local.dir
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/install.dir
 C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/edit_cache.dir
 C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/rebuild_cache.dir
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/list_install_components.dir

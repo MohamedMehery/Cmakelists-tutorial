@@ -68,10 +68,24 @@ include CMakeFiles/cmake-tutorial.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/cmake-tutorial.dir/flags.make
 
+CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.obj: CMakeFiles/cmake-tutorial.dir/flags.make
+CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.obj: ../src/gtest-example.cpp
+CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.obj: CMakeFiles/cmake-tutorial.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.obj -MF CMakeFiles\cmake-tutorial.dir\src\gtest-example.cpp.obj.d -o CMakeFiles\cmake-tutorial.dir\src\gtest-example.cpp.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\gtest-example.cpp"
+
+CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\gtest-example.cpp" > CMakeFiles\cmake-tutorial.dir\src\gtest-example.cpp.i
+
+CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\gtest-example.cpp" -o CMakeFiles\cmake-tutorial.dir\src\gtest-example.cpp.s
+
 CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj: CMakeFiles/cmake-tutorial.dir/flags.make
 CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj: ../src/main.cpp
 CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj: CMakeFiles/cmake-tutorial.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj"
 	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj -MF CMakeFiles\cmake-tutorial.dir\src\main.cpp.obj.d -o CMakeFiles\cmake-tutorial.dir\src\main.cpp.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\main.cpp"
 
 CMakeFiles/cmake-tutorial.dir/src/main.cpp.i: cmake_force
@@ -82,19 +96,53 @@ CMakeFiles/cmake-tutorial.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cmake-tutorial.dir/src/main.cpp.s"
 	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\main.cpp" -o CMakeFiles\cmake-tutorial.dir\src\main.cpp.s
 
+CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.obj: CMakeFiles/cmake-tutorial.dir/flags.make
+CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.obj: ../src/new-delete.cpp
+CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.obj: CMakeFiles/cmake-tutorial.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.obj -MF CMakeFiles\cmake-tutorial.dir\src\new-delete.cpp.obj.d -o CMakeFiles\cmake-tutorial.dir\src\new-delete.cpp.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\new-delete.cpp"
+
+CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\new-delete.cpp" > CMakeFiles\cmake-tutorial.dir\src\new-delete.cpp.i
+
+CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\new-delete.cpp" -o CMakeFiles\cmake-tutorial.dir\src\new-delete.cpp.s
+
+CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.obj: CMakeFiles/cmake-tutorial.dir/flags.make
+CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.obj: ../src/oop_concepts.cpp
+CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.obj: CMakeFiles/cmake-tutorial.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.obj"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.obj -MF CMakeFiles\cmake-tutorial.dir\src\oop_concepts.cpp.obj.d -o CMakeFiles\cmake-tutorial.dir\src\oop_concepts.cpp.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\oop_concepts.cpp"
+
+CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.i"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\oop_concepts.cpp" > CMakeFiles\cmake-tutorial.dir\src\oop_concepts.cpp.i
+
+CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.s"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\oop_concepts.cpp" -o CMakeFiles\cmake-tutorial.dir\src\oop_concepts.cpp.s
+
 # Object files for target cmake-tutorial
 cmake__tutorial_OBJECTS = \
-"CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj"
+"CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.obj" \
+"CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj" \
+"CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.obj" \
+"CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.obj"
 
 # External object files for target cmake-tutorial
 cmake__tutorial_EXTERNAL_OBJECTS =
 
+cmake-tutorial.exe: CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.obj
 cmake-tutorial.exe: CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj
+cmake-tutorial.exe: CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.obj
+cmake-tutorial.exe: CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.obj
 cmake-tutorial.exe: CMakeFiles/cmake-tutorial.dir/build.make
 cmake-tutorial.exe: CMakeFiles/cmake-tutorial.dir/linklibs.rsp
 cmake-tutorial.exe: CMakeFiles/cmake-tutorial.dir/objects1.rsp
 cmake-tutorial.exe: CMakeFiles/cmake-tutorial.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable cmake-tutorial.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable cmake-tutorial.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\cmake-tutorial.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
