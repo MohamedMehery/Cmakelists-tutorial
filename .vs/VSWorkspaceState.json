@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\CMakeFiles",
+    "\\CMakeFiles\\3.20.5",
     "\\src"
   ],
-  "SelectedNode": "\\CMakeLists.txt",
+  "SelectedNode": "\\CMakeFiles\\3.20.5\\VCTargetsPath.vcxproj",
   "PreviewInSolutionExplorer": false
 }
