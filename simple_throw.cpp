@@ -11,7 +11,6 @@ int main()
     try{
         if(x < 0)
             throw(x);
-
         else
             cout << "Thank u :)" <<endl;
     }
