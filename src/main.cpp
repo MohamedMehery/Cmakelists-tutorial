@@ -5,40 +5,34 @@
 
 using namespace std;
 
-class Base
+typedef struct
 {
-    private:
-        int count;
-    public:
-        Base() : count(0)
-        {
-            cout << "\tContructor!" << endl;
-        }
-        Base(int init) : count(init)
-        {
-            cout << "\tContructor!" << endl;
-        }
-        Base & operator=(Base & b)
-        {
-            cout << "\tAssignment!" <<endl;
-            return *this;
-        }
-        Base( Base & b)
-        {
-            this->count = b.count;
-            cout << "\tCopy contructor!" <<endl;
-        }
-        ~Base()
-        {
-            cout<< "\tDistructor!" << endl;
-        }
-};
+    string name;
+    void(*pf)(void *ptr);
+}OOP;
 
-int main()
+void sayname(void* ptr)
 {
-    Base b1(2) , b2;
-    b2 = b1;
-    Base b3(b1);
+    OOP* obj = (OOP*) ptr;
+    cout << '\t' << obj->name << endl;
+}
 
+void changetoupper(string & s)
+{
+    for(auto & iter : s)
+    {
+        iter -= ('a' - 'A');
+    }
+}
+
+int main(void)
+{
+    OOP O1;
+    O1.name = "Mohammed" ;
+    O1.pf = &sayname;
+    O1.pf(&O1);
+    string rand = "molmwjknknknkidqodjn";
+    changetoupper(rand);
+    cout << rand << endl;
     return 0;
 }

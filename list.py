@@ -61,13 +61,14 @@ class Person(object):
     # Constructor
     def __init__(self, name):
         self.name = name
+        print(f"My name is {name}")
   
     # To get name
     def getName(self):
         return self.name
   
     # To check if this person is an employee
-    def isEmployee(self):
+    def isEmployee(self): 
         return False
   
   
