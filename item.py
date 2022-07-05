@@ -1,20 +1,9 @@
 import csv
-
-
 #to make .exe from this file i used pyinstaller from anaconda cmd cd: C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial>pyinstaller --onefile oop.py
-
 class Item:
-
-
     #class attribute
-
-
     pay_rate = 0.8
-
-
     All = []
-
-
     def __init__(self, st:str ,p = 100,qunt = 1):
 
         self.__do_secret_habit()
@@ -25,7 +14,6 @@ class Item:
         self.__name = st
         print(f"\tItem name is {self.__name}\n", end = '')
         Item.All.append(self)
-
 
     @property #make the getname as read only attribute
     def name(self):
@@ -68,7 +56,7 @@ class Item:
 
         return f"item({self.__class__.__name__},{self.__name},{self.__price} , {self.quantity} )"
 
-
+    #diff betn class method and instance method is that instance methor dedicated to the object but class method related to hole class
     @classmethod    ### to use this method without crearing object
     def instantiate_from_csv(cls):
         with open('items.csv' , 'r') as f:
@@ -90,7 +78,6 @@ class Item:
         #this function is static method which is applyed to all class no just a signal item
         if isinstance(num, float):
             return num.is_integer()
-
         elif isinstance(num, int):
             return True
         else:

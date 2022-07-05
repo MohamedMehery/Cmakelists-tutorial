@@ -28,7 +28,5 @@ int main()
     vector<int> v ={6, 1, 3, 3, 3, 6, 6};
     vector<int> x = {13, 19, 13, 13};
     cout << *(nondublicated(v)) << endl;
-    
-
     return 0;
 }

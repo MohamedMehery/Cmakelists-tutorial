@@ -1,1 +1,1 @@
-    assert(arr.size() == n);
+i + 1
