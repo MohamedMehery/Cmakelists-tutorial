@@ -8,36 +8,43 @@
     you should first remove 3 -> 4 -> -7, 
     then -6 -> 6, leaving only 5.
  * */
-#unsolved
-void removeredundant(list<int> & l)
+//Solver properly :)
+void removezerosum(list<int> & l)
 {
-    for(int i = 0 ; i < l.size() ; i++)
+    // iterate over the list
+    auto s  = l.size();
+    for(int i = 0 ; i < s ; i++)
     {
-        list<int>::iterator start = l.begin();
-        for(auto it = 0 ;it < i ; it++,start++);
-        auto sum = accumulate( start , l.end()  , 0);
-        if(!sum)
+        //iterate over the items of list to check sum
+        for(int j = 2 ; j < s ; j++)
         {
-            for(int j = i ; j < l.size() ; j++)
+            auto it1 = l.begin() ;
+            for(int iter = 0 ; iter < i ; iter++,it1++);
+            auto it2 = it1;
+            for(int iter = 0 ; iter < j ; iter++,it2++);
+            auto sum = accumulate(it1 , ++it2 , 0);
+            if(!sum)
             {
-                auto position = l.begin() ;
-                for(auto it = 0 ;it < j ; it++,position++);
-                l.remove(*(position));
-                cout << "\tremoved " << *position ;
+                l.erase(it1,it2);
             }
-            cout << endl;
         }
     }
 }
 
-int main()
+inline void showlist(list<int> &l)
 {
-    list<int> l = {3 , 4 , -7 , 5 , -6 , 6};
-    removeredundant(l);
     for(auto i : l)
     {
         cout << "\t" << i ;
     }
-    cout <<endl;
+    cout <<endl;   
+}
+
+int main()
+{
+    list<int> l = {3 , 4 , -7 , 5 , -6 , 6, -9 , 4 , 5,2,-2};
+    showlist(l);
+    removezerosum(l);
+    showlist(l);
     return 0;
 }
