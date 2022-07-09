@@ -1,5 +1,7 @@
 #include "binsearch.hpp"
 #include <list>
+#include <cmath>        //to use roundf(9.6)
+
 /**
  *  Good morning! Here's your coding interview problem for today.
     This problem was asked by Amazon.
@@ -30,9 +32,10 @@ void removezerosum(list<int> & l)
         }
     }
 }
-
-inline void showlist(list<int> &l)
+template<typename T , size_t N>
+inline void showlist(list<T> &l)
 {
+    int arr[N] = {0};
     for(auto i : l)
     {
         cout << "\t" << i ;
@@ -43,8 +46,8 @@ inline void showlist(list<int> &l)
 int main()
 {
     list<int> l = {3 , 4 , -7 , 5 , -6 , 6, -9 , 4 , 5,2,-2};
-    showlist(l);
+    showlist<int,1>(l);
     removezerosum(l);
-    showlist(l);
+    showlist<int,1>(l);
     return 0;
 }

@@ -1,1 +1,1 @@
-items
+print(items[2])

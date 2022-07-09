@@ -1,4 +1,5 @@
 #include "binsearch.hpp"
+#include "../eigen3/eigen/Dense" // '..' means get back to out directory
 
 int main(void)
 {
