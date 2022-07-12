@@ -29,3 +29,4 @@ typename vector<T>::iterator binsearch( vector<T> &v ,typename vector<T>::iterat
     cout <<"\tNot found" <<endl;
     return v.begin()-1;
 }
+

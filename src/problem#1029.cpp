@@ -1,4 +1,8 @@
 #include "binsearch.hpp"
+#include <gtest/gtest.h>
+#include <gmock/gmock.h>
+#include <memory>
+
 
 using namespace std;
 
@@ -23,9 +27,18 @@ int problem1029(int n)
     return result;
 }
 
-
-int main()
+TEST(problem1029 , testcase_Success)
 {
-    cout << '\t' << problem1029(30) << endl;
-    return 0;
+    //int input , result;
+    //cin >>input;
+    //cin >> result;
+    EXPECT_EQ(2 , problem1029(30) );
+} 
+
+
+int main(int argc , char ** argv)
+{
+    //cout << '\t' << problem1029(30) << endl;
+    ::testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
