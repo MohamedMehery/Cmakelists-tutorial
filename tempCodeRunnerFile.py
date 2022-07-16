@@ -1,1 +1,1 @@
-print(items[2])
+list(reader)

@@ -1,24 +1,61 @@
-#include "binsearch.hpp"
-#include "../eigen3/eigen/Dense" // '..' means get back to out directory
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <iterator>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include <memory>
 
-int sum(int a , int b)
+using namespace std;
+
+class Student
 {
-    return a + b;
+    public:
+    int score ;
+    string name;
+    public:
+    Student( int s , string nam): score(s) , name(nam)
+    {cout << "\tConstructor is called!" << endl;}
+    Student(): score(0) , name("")
+    {cout << "\tConstructor is called!" << endl;}
+    bool Displayresult()
+    {
+        return (score >= 50) ? true : false ;
+    }
+};
+
+class Studenttest: public testing::Test
+{
+    public:
+        Student s1;
+        // similar to constructor
+        void SetUp()override
+        {
+            s1.score = 100;
+            s1.name = "MOHAMMED";
+        }
+        //similar to distructor
+        void TearDown()override
+        {
+
+        }
+
+
+};
+
+TEST_F(Studenttest , classtesting1)
+{
+    EXPECT_TRUE(s1.Displayresult());
 }
 
-TEST(sum, TEST_1)
+TEST_F(Studenttest , classtesting2)
 {
-    EXPECT_EQ(5 , sum(3,2));
+    s1.score = 2;
+    EXPECT_FALSE(s1.Displayresult());
 }
 
-
-int main(int argc , char **argv)
+int main(int argc , char ** arcv)
 {
-    ::testing::InitGoogleTest(&argc ,argv );
-    //vector<int> x = {1,2,3,4,6};
-    //cout<< *binsearch<int>(x , x.begin() , x.end() , 6) << endl;
+    testing::InitGoogleTest( &argc , arcv);
     return RUN_ALL_TESTS();
 }

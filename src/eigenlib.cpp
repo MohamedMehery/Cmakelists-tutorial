@@ -44,8 +44,6 @@ void linear_algebra(void)
     cout << Eigen::sin(f.array()) << endl;
 
     /////////////////////////////////////////////////
-
-
 }
 
 

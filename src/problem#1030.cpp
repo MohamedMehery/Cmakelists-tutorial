@@ -92,6 +92,11 @@ TEST(problem1030 , test1)
     string c = {'R', 'G', 'B', 'G', 'B'};
     EXPECT_EQ( "R" , problem1030(c) );
 }
+TEST(problem1030, fail1)
+{
+    string c = "RGGRBBR";
+    EXPECT_EQ("R" , problem1030(c) );
+}
 
 int main(int argc , char ** argv)
 {
@@ -99,6 +104,5 @@ int main(int argc , char ** argv)
     return RUN_ALL_TESTS();
     //string c = {'R', 'G', 'B', 'G', 'B'};
     //cout<< problem1030(c)<<endl;
-    
     return 0;
 }
