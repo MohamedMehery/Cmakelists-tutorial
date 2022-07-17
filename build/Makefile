@@ -116,113 +116,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cmake-tutorial
+# Target rules for targets named main
 
 # Build rule for target.
-cmake-tutorial: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 cmake-tutorial
-.PHONY : cmake-tutorial
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-cmake-tutorial/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/build
-.PHONY : cmake-tutorial/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
 
-src/gtest-example.obj: src/gtest-example.cpp.obj
-.PHONY : src/gtest-example.obj
-
-# target to build an object file
-src/gtest-example.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.obj
-.PHONY : src/gtest-example.cpp.obj
-
-src/gtest-example.i: src/gtest-example.cpp.i
-.PHONY : src/gtest-example.i
-
-# target to preprocess a source file
-src/gtest-example.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.i
-.PHONY : src/gtest-example.cpp.i
-
-src/gtest-example.s: src/gtest-example.cpp.s
-.PHONY : src/gtest-example.s
-
-# target to generate assembly for a file
-src/gtest-example.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/gtest-example.cpp.s
-.PHONY : src/gtest-example.cpp.s
-
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
+main.obj: main.cpp.obj
+.PHONY : main.obj
 
 # target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
-src/new-delete.obj: src/new-delete.cpp.obj
-.PHONY : src/new-delete.obj
-
-# target to build an object file
-src/new-delete.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.obj
-.PHONY : src/new-delete.cpp.obj
-
-src/new-delete.i: src/new-delete.cpp.i
-.PHONY : src/new-delete.i
+main.i: main.cpp.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/new-delete.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.i
-.PHONY : src/new-delete.cpp.i
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/new-delete.s: src/new-delete.cpp.s
-.PHONY : src/new-delete.s
-
-# target to generate assembly for a file
-src/new-delete.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/new-delete.cpp.s
-.PHONY : src/new-delete.cpp.s
-
-src/oop_concepts.obj: src/oop_concepts.cpp.obj
-.PHONY : src/oop_concepts.obj
-
-# target to build an object file
-src/oop_concepts.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.obj
-.PHONY : src/oop_concepts.cpp.obj
-
-src/oop_concepts.i: src/oop_concepts.cpp.i
-.PHONY : src/oop_concepts.i
-
-# target to preprocess a source file
-src/oop_concepts.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.i
-.PHONY : src/oop_concepts.cpp.i
-
-src/oop_concepts.s: src/oop_concepts.cpp.s
-.PHONY : src/oop_concepts.s
+main.s: main.cpp.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/oop_concepts.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\cmake-tutorial.dir\build.make CMakeFiles/cmake-tutorial.dir/src/oop_concepts.cpp.s
-.PHONY : src/oop_concepts.cpp.s
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -232,19 +160,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... cmake-tutorial
-	@echo ... src/gtest-example.obj
-	@echo ... src/gtest-example.i
-	@echo ... src/gtest-example.s
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
-	@echo ... src/new-delete.obj
-	@echo ... src/new-delete.i
-	@echo ... src/new-delete.s
-	@echo ... src/oop_concepts.obj
-	@echo ... src/oop_concepts.i
-	@echo ... src/oop_concepts.s
+	@echo ... main
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 .PHONY : help
 
 

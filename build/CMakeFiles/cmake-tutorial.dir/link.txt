@@ -1,3 +1,0 @@
-"C:\Program Files (x86)\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmake-tutorial.dir/objects.a
-C:\TDM-GCC-64\bin\ar.exe cr CMakeFiles\cmake-tutorial.dir/objects.a @CMakeFiles\cmake-tutorial.dir\objects1.rsp
-C:\TDM-GCC-64\bin\g++.exe -Wl,--whole-archive CMakeFiles\cmake-tutorial.dir/objects.a -Wl,--no-whole-archive -o cmake-tutorial.exe -Wl,--out-implib,libcmake-tutorial.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmake-tutorial.dir\linklibs.rsp

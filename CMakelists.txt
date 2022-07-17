@@ -1,8 +1,3 @@
-CMake_minimum_required(VERSION 3.20.5)
-project("cmake-tutorial")
-file(GLOB SRC_FILES "src/*.cpp")
-add_executable(${PROJECT_NAME} ${SRC_FILES} src/main.cpp)
-#include(CTest)
-
-#add_test("test1" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}") #the cmake variable CMAKE_CURRENT_BINARY_DIR points to the build directory and $ is to dereference the variable
-#add_test("test2" "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}" "anyparameter")
+cmake_minimum_required(VERSION 3.20.5)
+project(hello)
+add_executable(main main.cpp)

@@ -20,7 +20,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files (x86)/CMake/share/cmake-3.20/Modules/Compiler/GNU-C.cmake"
   "C:/Program Files (x86)/CMake/share/cmake-3.20/Modules/Compiler/GNU-CXX.cmake"
   "C:/Program Files (x86)/CMake/share/cmake-3.20/Modules/Compiler/GNU.cmake"
-  "C:/Program Files (x86)/CMake/share/cmake-3.20/Modules/Platform/GNUtoMS_lib.bat.in"
   "C:/Program Files (x86)/CMake/share/cmake-3.20/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "C:/Program Files (x86)/CMake/share/cmake-3.20/Modules/Platform/Windows-GNU-C.cmake"
   "C:/Program Files (x86)/CMake/share/cmake-3.20/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
@@ -44,11 +43,10 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-  "CMakeFiles/CMakeGNUtoMS_lib.bat"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/cmake-tutorial.dir/DependInfo.cmake"
+  "CMakeFiles/main.dir/DependInfo.cmake"
   )
