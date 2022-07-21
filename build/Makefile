@@ -64,6 +64,39 @@ CMAKE_BINARY_DIR = "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
@@ -83,6 +116,18 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	"C:\Program Files (x86)\CMake\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -116,24 +161,37 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named main
+# Target rules for targets named hellobinary
 
 # Build rule for target.
-main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 main
-.PHONY : main
+hellobinary: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 hellobinary
+.PHONY : hellobinary
 
 # fast build rule for target.
-main/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-.PHONY : main/fast
+hellobinary/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/build
+.PHONY : hellobinary/fast
+
+#=============================================================================
+# Target rules for targets named wifi_lib
+
+# Build rule for target.
+wifi_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 wifi_lib
+.PHONY : wifi_lib
+
+# fast build rule for target.
+wifi_lib/fast:
+	$(MAKE) $(MAKESILENT) -f lib\CMakeFiles\wifi_lib.dir\build.make lib/CMakeFiles/wifi_lib.dir/build
+.PHONY : wifi_lib/fast
 
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -141,7 +199,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -149,8 +207,32 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+src/calc.obj: src/calc.cpp.obj
+.PHONY : src/calc.obj
+
+# target to build an object file
+src/calc.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/src/calc.cpp.obj
+.PHONY : src/calc.cpp.obj
+
+src/calc.i: src/calc.cpp.i
+.PHONY : src/calc.i
+
+# target to preprocess a source file
+src/calc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/src/calc.cpp.i
+.PHONY : src/calc.cpp.i
+
+src/calc.s: src/calc.cpp.s
+.PHONY : src/calc.s
+
+# target to generate assembly for a file
+src/calc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/src/calc.cpp.s
+.PHONY : src/calc.cpp.s
 
 # Help Target
 help:
@@ -159,11 +241,19 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... edit_cache
+	@echo ... install
+	@echo ... install/local
+	@echo ... install/strip
+	@echo ... list_install_components
 	@echo ... rebuild_cache
-	@echo ... main
+	@echo ... hellobinary
+	@echo ... wifi_lib
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/calc.obj
+	@echo ... src/calc.i
+	@echo ... src/calc.s
 .PHONY : help
 
 

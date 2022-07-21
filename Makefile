@@ -1,8 +1,6 @@
 build:
-	g++ .\src\main.cpp -lgtest -lgtest_main -pthread -o .\src\main.exe
-
+	g++ .\main.cpp -lgtest -lgtest_main -pthread -o .\main.exe
 clean:
-	rm .\src\main.exe
-
+	rm .\main.exe
 run:
 	.\main.exe

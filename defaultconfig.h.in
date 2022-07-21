@@ -1,0 +1,5 @@
+#define product_type "BMW"
+#define Hello_app_version_minor @HELLOAPP_VERSION_MINOR@
+#define Hello_app_version_major @HELLOAPP_VERSION_MAJOR@
+#define DEBUGE_INFO "${DEBUGE_INFO}"
+#define MYvariable "${MYvariable}"

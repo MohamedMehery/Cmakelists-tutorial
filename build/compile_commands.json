@@ -1,0 +1,17 @@
+[
+{
+  "directory": "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe -DSTDCXX=17 @CMakeFiles/hellobinary.dir/includes_CXX.rsp -g -march=native -std=gnu++17 -o CMakeFiles\\hellobinary.dir\\main.cpp.obj -c \"C:\\Users\\Mohamed Mehery\\Documents\\GitHub\\Cmakelists-tutorial\\main.cpp\"",
+  "file": "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/main.cpp"
+},
+{
+  "directory": "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe -DSTDCXX=17 @CMakeFiles/hellobinary.dir/includes_CXX.rsp -g -march=native -std=gnu++17 -o CMakeFiles\\hellobinary.dir\\src\\calc.cpp.obj -c \"C:\\Users\\Mohamed Mehery\\Documents\\GitHub\\Cmakelists-tutorial\\src\\calc.cpp\"",
+  "file": "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/src/calc.cpp"
+},
+{
+  "directory": "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/lib",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -std=gnu++17 -o CMakeFiles\\wifi_lib.dir\\lib.cpp.obj -c \"C:\\Users\\Mohamed Mehery\\Documents\\GitHub\\Cmakelists-tutorial\\lib\\lib.cpp\"",
+  "file": "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/lib/lib.cpp"
+}
+]

@@ -1,4 +1,4 @@
-#include "binsearch.hpp"
+#include "../inc/binsearch.hpp"
 #include "../eigen3/eigen/Dense" // '..' means get back to out directory
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
@@ -88,7 +88,5 @@ TEST(testpatent , test6)
 int main(int argc , char **argv)
 {
     ::testing::InitGoogleTest(&argc ,argv );
-    //vector<int> x = {1,2,3,4,6};
-    //cout<< *binsearch<int>(x , x.begin() , x.end() , 6) << endl;
     return RUN_ALL_TESTS();
 }

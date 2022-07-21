@@ -1,3 +1,14 @@
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/list_install_components.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/hellobinary.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/install/local.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/install.dir
 C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/edit_cache.dir
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/main.dir
 C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/rebuild_cache.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/install/strip.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/lib/CMakeFiles/wifi_lib.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/lib/CMakeFiles/install/local.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/lib/CMakeFiles/install.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/lib/CMakeFiles/edit_cache.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/lib/CMakeFiles/rebuild_cache.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/lib/CMakeFiles/list_install_components.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/lib/CMakeFiles/install/strip.dir

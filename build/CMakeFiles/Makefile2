@@ -62,42 +62,85 @@ CMAKE_BINARY_DIR = "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/main.dir/all
+all: CMakeFiles/hellobinary.dir/all
+all: lib/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: lib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/main.dir/clean
+clean: CMakeFiles/hellobinary.dir/clean
+clean: lib/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/main.dir
+# Directory level rules for directory lib
+
+# Recursive "all" directory target.
+lib/all: lib/CMakeFiles/wifi_lib.dir/all
+.PHONY : lib/all
+
+# Recursive "preinstall" directory target.
+lib/preinstall:
+.PHONY : lib/preinstall
+
+# Recursive "clean" directory target.
+lib/clean: lib/CMakeFiles/wifi_lib.dir/clean
+.PHONY : lib/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/hellobinary.dir
 
 # All Build rule for target.
-CMakeFiles/main.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=1,2 "Built target main"
-.PHONY : CMakeFiles/main.dir/all
+CMakeFiles/hellobinary.dir/all: lib/CMakeFiles/wifi_lib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=1,2,3 "Built target hellobinary"
+.PHONY : CMakeFiles/hellobinary.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/main.dir/all
+CMakeFiles/hellobinary.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/hellobinary.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 0
-.PHONY : CMakeFiles/main.dir/rule
+.PHONY : CMakeFiles/hellobinary.dir/rule
 
 # Convenience name for target.
-main: CMakeFiles/main.dir/rule
-.PHONY : main
+hellobinary: CMakeFiles/hellobinary.dir/rule
+.PHONY : hellobinary
 
 # clean rule for target.
-CMakeFiles/main.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\main.dir\build.make CMakeFiles/main.dir/clean
-.PHONY : CMakeFiles/main.dir/clean
+CMakeFiles/hellobinary.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/clean
+.PHONY : CMakeFiles/hellobinary.dir/clean
+
+#=============================================================================
+# Target rules for target lib/CMakeFiles/wifi_lib.dir
+
+# All Build rule for target.
+lib/CMakeFiles/wifi_lib.dir/all:
+	$(MAKE) $(MAKESILENT) -f lib\CMakeFiles\wifi_lib.dir\build.make lib/CMakeFiles/wifi_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib\CMakeFiles\wifi_lib.dir\build.make lib/CMakeFiles/wifi_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num=4,5 "Built target wifi_lib"
+.PHONY : lib/CMakeFiles/wifi_lib.dir/all
+
+# Build rule for subdir invocation for target.
+lib/CMakeFiles/wifi_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 lib/CMakeFiles/wifi_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 0
+.PHONY : lib/CMakeFiles/wifi_lib.dir/rule
+
+# Convenience name for target.
+wifi_lib: lib/CMakeFiles/wifi_lib.dir/rule
+.PHONY : wifi_lib
+
+# clean rule for target.
+lib/CMakeFiles/wifi_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib\CMakeFiles\wifi_lib.dir\build.make lib/CMakeFiles/wifi_lib.dir/clean
+.PHONY : lib/CMakeFiles/wifi_lib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
