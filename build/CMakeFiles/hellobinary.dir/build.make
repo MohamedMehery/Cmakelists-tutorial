@@ -109,7 +109,6 @@ hellobinary_EXTERNAL_OBJECTS =
 hellobinary.exe: CMakeFiles/hellobinary.dir/main.cpp.obj
 hellobinary.exe: CMakeFiles/hellobinary.dir/src/calc.cpp.obj
 hellobinary.exe: CMakeFiles/hellobinary.dir/build.make
-hellobinary.exe: lib/libwifi_lib.a
 hellobinary.exe: CMakeFiles/hellobinary.dir/linklibs.rsp
 hellobinary.exe: CMakeFiles/hellobinary.dir/objects1.rsp
 hellobinary.exe: CMakeFiles/hellobinary.dir/link.txt

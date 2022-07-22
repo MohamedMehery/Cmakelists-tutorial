@@ -37,38 +37,6 @@ if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "C:/TDM-GCC-64/bin/objdump.exe")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/lib/cmake_install.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/executable/hellobinary.exe")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/executable" TYPE FILE FILES "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/hellobinary.exe")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/hdr/lib.hpp;C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/hdr/calc.hpp")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/hdr" TYPE FILE FILES
-    "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/lib/lib.hpp"
-    "C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/inc/calc.hpp"
-    )
-endif()
-
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()

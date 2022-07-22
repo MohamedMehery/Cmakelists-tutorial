@@ -6,11 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"childIndexes" : 
-					[
-						1
-					],
-					"hasInstallRule" : true,
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.20.4"
@@ -21,20 +16,6 @@
 					[
 						0
 					]
-				},
-				{
-					"build" : "lib",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.20.4"
-					},
-					"parentIndex" : 0,
-					"projectIndex" : 0,
-					"source" : "lib",
-					"targetIndexes" : 
-					[
-						1
-					]
 				}
 			],
 			"name" : "Debug",
@@ -43,14 +24,12 @@
 				{
 					"directoryIndexes" : 
 					[
-						0,
-						1
+						0
 					],
 					"name" : "HELLOAPP",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				}
 			],
@@ -59,15 +38,8 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "hellobinary::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-hellobinary-Debug-a8b4662d8a78ba962f39.json",
+					"jsonFile" : "target-hellobinary-Debug-1387e4c700957d04bf2a.json",
 					"name" : "hellobinary",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "wifi_lib::@306ed2d68c6501e8728f",
-					"jsonFile" : "target-wifi_lib-Debug-4af98c45199fe455496a.json",
-					"name" : "wifi_lib",
 					"projectIndex" : 0
 				}
 			]

@@ -144,12 +144,6 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "C:/Program Files (x86)/CMake/share/cmake-3.20/Modules/CMakeCommonLanguageInclude.cmake"
-		},
-		{
-			"path" : "defaultconfig.h.in"
-		},
-		{
-			"path" : "lib/CMakeLists.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

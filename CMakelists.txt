@@ -8,137 +8,186 @@ SET(SRC_FILES "main.cpp;src/calc.cpp")
 
 add_executable(hellobinary ${SRC_FILES})
 target_include_directories(hellobinary PUBLIC inc/ lib/)
-##############################################################################
-#print set(SRC_FILES) using message() keyword
-#with Fatal error, cmake will not generate the make file
-#message(FATAL_ERROR "Source files include are ${SRC_FILES}")
-message(WARNING "Source files include are ${SRC_FILES}")
-message(STATUS "the source directory ${CMAKE_SOURCE_DIR}")
-#cmake --help-variable-list #show the list of built in varaible
-#cmake --help-variable-list | grep -i source            #but grep is not setup-_-
-#grep means search , -i means ignore the case senstive 
-#cmake --help-variable var      #this will show the var use
-##############################################################################
-if(EXISTS ${CMAKE_SOURCE_DIR}/main.cpp)
-    message(STATUS "main file exist")
-else()
-    message(FATAL_ERROR "Source files main.cpp doesnot exist ${SRC_FILES}")
-endif()
+# ##############################################################################
+# #print set(SRC_FILES) using message() keyword
+# #with Fatal error, cmake will not generate the make file
+# #message(FATAL_ERROR "Source files include are ${SRC_FILES}")
+# message(WARNING "Source files include are ${SRC_FILES}")
+# message(STATUS "the source directory ${CMAKE_SOURCE_DIR}")
+# #cmake --help-variable-list #show the list of built in varaible
+# #cmake --help-variable-list | grep -i source            #but grep is not setup-_-
+# #grep means search , -i means ignore the case senstive 
+# #cmake --help-variable var      #this will show the var use
+# ##############################################################################
+# if(EXISTS ${CMAKE_SOURCE_DIR}/main.cpp)
+#     message(STATUS "main file exist")
+# else()
+#     message(FATAL_ERROR "Source files main.cpp doesnot exist ${SRC_FILES}")
+# endif()
 
-#similar to #include , it will replace with the cmake inside the /lib directory
-add_subdirectory(${CMAKE_SOURCE_DIR}/lib)
-target_link_libraries(hellobinary PUBLIC wifi_lib)#static linking library
-##############################################################################
-message(STATUS "CMAKE_CURRENT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}") #path of current (parent or child) cmake file
-message(STATUS "CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}") #path of parent cmake file
-message(STATUS "CMAKE_CURRENT_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}")
-message(STATUS "CMAKE_GENERATOR ${CMAKE_GENERATOR}")
-##############################################################################
-#I can set CMAKE_CXX_STANDARD from terminal, and cmake file will reserve the value
-#   cmake .. -DCMAKE_CXX_STANDARD=17
-#set(CMAKE_CXX_STANDARD 14)
-SEt(CMAKE_CXX_STANDARD_REQUIRED TRUE)
-message(STATUS "CMAKE_CXX_STANDARD ${CMAKE_CXX_STANDARD}")
-MESSAGE(STATUS "CMAKE_CXX_STANDARD_REQUIRED ${CMAKE_CXX_STANDARD_REQUIRED}")
-##############################################################################
-#Environment variables
-set(p $ENV{PATH}) #can loop on this variable to get into specific environment
-Message(STATUS "Environment path $ENV{PATH}")
-#set variable throw terminal
-Message(STATUS "MYvariable = ${MYvariable}")
-message(STATUS "PROJECT_BINARY_DIR ${PROJECT_BINARY_DIR}")
-##############################################################################
-#   configure file match the cmake with c++ code
-#   must be after all configurations variables
+# #similar to #include , it will replace with the cmake inside the /lib directory
+# add_subdirectory(${CMAKE_SOURCE_DIR}/lib)
+# target_link_libraries(hellobinary PUBLIC wifi_lib)#static linking library
+# ##############################################################################
+# message(STATUS "CMAKE_CURRENT_SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}") #path of current (parent or child) cmake file
+# message(STATUS "CMAKE_SOURCE_DIR ${CMAKE_SOURCE_DIR}") #path of parent cmake file
+# message(STATUS "CMAKE_CURRENT_BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}")
+# message(STATUS "CMAKE_GENERATOR ${CMAKE_GENERATOR}")
+# ##############################################################################
+# #I can set CMAKE_CXX_STANDARD from terminal, and cmake file will reserve the value
+# #   cmake .. -DCMAKE_CXX_STANDARD=17
+# #set(CMAKE_CXX_STANDARD 14)
+# SEt(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+# message(STATUS "CMAKE_CXX_STANDARD ${CMAKE_CXX_STANDARD}")
+# MESSAGE(STATUS "CMAKE_CXX_STANDARD_REQUIRED ${CMAKE_CXX_STANDARD_REQUIRED}")
+# ##############################################################################
+# #Environment variables
+# set(p $ENV{PATH}) #can loop on this variable to get into specific environment
+# Message(STATUS "Environment path $ENV{PATH}")
+# #set variable throw terminal
+# Message(STATUS "MYvariable = ${MYvariable}")
+# message(STATUS "PROJECT_BINARY_DIR ${PROJECT_BINARY_DIR}")
+# ##############################################################################
+# #   configure file match the cmake with c++ code
+# #   must be after all configurations variables
+# # configure_file(defaultconfig.h.in defaultconfig.h)
+# # target_include_directories(hellobinary PUBLIC ${PROJECT_BINARY_DIR})
+# ##############################################################################
+# #   1- if
+# #   -OFF -0 -NO -FALSE -N "NOTFOUND" -"IGNORE" --> false
+
+# # Ctrl+ '/' from keyboard not keybad will toggle block comment
+# if(DEBUGE)
+# set(DEBUGE_INFO "\tAuthor/ Mohamed Abdelnasser")
+# message(STATUS "DEBUGE_INFO ${DEBUGE_INFO}")
+# else()
+# SET(DEBUGE_INFO "IGNORE")
+# endif()
+# #if(NOT DEBUGE)
+# #if(var1 AND var2)
+# #if(var1 OR var2)
+# #if(myval MATCHES regularexpression)
+# #if(EXISTS file)
+# #if(var1 LESS var2)
+# #if(var1 GRATER_EQUAL var2)
+# #if(var1 EQUAL var2)
+# #if(TARGET wifi_lib) -> add_executable()    add_library()   add_custom_target() all this function add target
+
+# if(TARGET wifi_lib)
+#     message(STATUS "wifi_lib is available")
+# else()
+#     message(FATAL_ERROR "\twifi_lib is unavailable") #abort cmake build
+# endif()
+# ##############################################################################
+# foreach(F IN ITEMS M O H A M E D)
+#     message(STATUS ${F})
+# endforeach(F in ITEMS )
+# #   with list
+# set(myname M O H A M E D)
+# foreach(F IN LISTS myname)
+#     message(STATUS ${F})
+# endforeach(F IN LIST myname)
+# #   while loop
+# set(var10 10)
+# while(var10)
+#     message(STATUS "var10 = ${var10}")
+#     math(EXPR var10 "${var10} - 1")
+# endwhile()
+# while( ${var10} LESS_EQUAL 10 )
+#     message(STATUS "var10 = ${var10}")
+#     math(EXPR var10 "${var10} + 1")
+# endwhile()
+# ##############################################################################
+# #Add config file must be at the end of cmake script
 # configure_file(defaultconfig.h.in defaultconfig.h)
 # target_include_directories(hellobinary PUBLIC ${PROJECT_BINARY_DIR})
-##############################################################################
-#   1- if
-#   -OFF -0 -NO -FALSE -N "NOTFOUND" -"IGNORE" --> false
+# ##############################################################################
+# # cmake function
+# function(func1 arg1)
+#     message(STATUS "arg1 name is ${arg1}")
+#     message(STATUS "arg1 value is ${${arg1}}")
+#     message(STATUS "extra arguments ... ${ARGN}")
+#     message(STATUS "count of arg ... ${ARGC}")
+# endfunction(func1 arg1)
+# set(var14 1 2 3 4)
+# func1(var14 var2)
+# ##############################################################################
+# # cmake cache will save values for old build
+# # set() will not save variable in cache 
+# # option will save vairable in cachefile
+# # set will save in cache when add CACHE keyword
+# # the pros of cache is that i can remove set() and var still in cache and i can use it
+# option(Cachevar1 "Comment above Mohammed" False)
+# set(cachevar2 True CACHE BOOL "Comment above Mohammed")
+# message(STATUS "cachevar2 is ${cachevar2}") #dispit it was removed there is no error
+# ###########################################################################################
+# # compiler info
+# #don't need to generate header file to save the value of STDCXX
+# target_compile_definitions(hellobinary PUBLIC "STDCXX=17")
+# target_compile_options(hellobinary PUBLIC -march=native) #set machine architecture option to native
+# #compiler options eg- optmization options(size , ..)
+# ###########################################################################################
+# # install is just a copy of hdr, executable. type the next command in terminal to execute install
+# # cmake --install .
+# install(FILES "${PROJECT_BINARY_DIR}/hellobinary.exe"
+#         DESTINATION "${PROJECT_BINARY_DIR}/executable")
 
-# Ctrl+ '/' from keyboard not keybad will toggle block comment
-if(DEBUGE)
-set(DEBUGE_INFO "\tAuthor/ Mohamed Abdelnasser")
-message(STATUS "DEBUGE_INFO ${DEBUGE_INFO}")
-else()
-SET(DEBUGE_INFO "IGNORE")
-endif()
-#if(NOT DEBUGE)
-#if(var1 AND var2)
-#if(var1 OR var2)
-#if(myval MATCHES regularexpression)
-#if(EXISTS file)
-#if(var1 LESS var2)
-#if(var1 GRATER_EQUAL var2)
-#if(var1 EQUAL var2)
-#if(TARGET wifi_lib) -> add_executable()    add_library()   add_custom_target() all this function add target
-
-if(TARGET wifi_lib)
-    message(STATUS "wifi_lib is available")
-else()
-    message(FATAL_ERROR "\twifi_lib is unavailable") #abort cmake build
-endif()
-##############################################################################
-foreach(F IN ITEMS M O H A M E D)
-    message(STATUS ${F})
-endforeach(F in ITEMS )
-#   with list
-set(myname M O H A M E D)
-foreach(F IN LISTS myname)
-    message(STATUS ${F})
-endforeach(F IN LIST myname)
-#   while loop
-set(var10 10)
-while(var10)
-    message(STATUS "var10 = ${var10}")
-    math(EXPR var10 "${var10} - 1")
-endwhile()
-while( ${var10} LESS_EQUAL 10 )
-    message(STATUS "var10 = ${var10}")
-    math(EXPR var10 "${var10} + 1")
-endwhile()
-##############################################################################
-#Add config file must be at the end of cmake script
-configure_file(defaultconfig.h.in defaultconfig.h)
-target_include_directories(hellobinary PUBLIC ${PROJECT_BINARY_DIR})
-##############################################################################
-# cmake function
-function(func1 arg1)
-    message(STATUS "arg1 name is ${arg1}")
-    message(STATUS "arg1 value is ${${arg1}}")
-    message(STATUS "extra arguments ... ${ARGN}")
-    message(STATUS "count of arg ... ${ARGC}")
-endfunction(func1 arg1)
-set(var14 1 2 3 4)
-func1(var14 var2)
-##############################################################################
-# cmake cache will save values for old build
-# set() will not save variable in cache 
-# option will save vairable in cachefile
-# set will save in cache when add CACHE keyword
-# the pros of cache is that i can remove set() and var still in cache and i can use it
-option(Cachevar1 "Comment above Mohammed" False)
-set(cachevar2 True CACHE BOOL "Comment above Mohammed")
-message(STATUS "cachevar2 is ${cachevar2}") #dispit it was removed there is no error
+# install(FILES
+#         "${CMAKE_SOURCE_DIR}/lib/lib.hpp"
+#         "${CMAKE_SOURCE_DIR}/inc/calc.hpp"
+#         DESTINATION 
+#         "${PROJECT_BINARY_DIR}/hdr")
 ###########################################################################################
-# compiler info
-#don't need to generate header file to save the value of STDCXX
-target_compile_definitions(hellobinary PUBLIC "STDCXX=17")
-target_compile_options(hellobinary PUBLIC -march=native) #set machine architecture option to native
-#compiler options eg- optmization options(size , ..)
+# 10- FILE
+# READ will read main.cpp as it's, with it's format
+# FILE(READ "main.cpp" MAIN_TXT)
+# message("main file text:-\n${MAIN_TXT}")
+# #STRINGS will read it as string
+# FILE(STRINGS "main.cpp" MAIN_TXT) #will print all main.cpp in single line
+# message("main file text:-\n${MAIN_TXT}")
+# #STRINGS and REGEX to search something
+# FILE(STRINGS "main.cpp" MAIN_TXT REGEX "^int.") #will print the line of int main(void)
+# message("main file text:-\n${MAIN_TXT}")
+# #GLOB_RECURSE will search name of files
+# FILE(GLOB_RECURSE SRCS "*.cpp") #will print all .cpp files directories names in project
+# message("All cpp files:-\n${SRCS}") 
 ###########################################################################################
-# install is just a copy of hdr, executable. type the next command in terminal to execute install
-# cmake --install .
-install(FILES "${PROJECT_BINARY_DIR}/hellobinary.exe"
-        DESTINATION "${PROJECT_BINARY_DIR}/executable")
-
-install(FILES
-        "${CMAKE_SOURCE_DIR}/lib/lib.hpp"
-        "${CMAKE_SOURCE_DIR}/inc/calc.hpp"
-        DESTINATION 
-        "${PROJECT_BINARY_DIR}/hdr")
-###########################################################################################
-# 10- File
+#10-2- STING command 
 FILE(READ "main.cpp" MAIN_TXT)
-message("main file text:-\n${MAIN_TXT}")
+STRING(REGEX REPLACE "int" "void" OUT ${MAIN_TXT}) 
+#message("All main.cpp file replace int with void:-\n${OUT}") 
+###########################################################################################
+#10-3- differenc between macro and function that macro has parent scope, it work in global variable
+set(globalvar 10)
+macro(macro10 arg1)
+    message(STATUS "${arg1} = ${${arg1}}")
+    set(${arg1} 15)
+endmacro(macro10 arg1)
+message(STATUS "globalvar before macro = ${globalvar}")
+macro10(globalvar)
+message(STATUS "globalvar after macro = ${globalvar}")
+# function will not do this unless we added PARENT_SCOP to set command
+set(globalvar 11)
+function(macro10 arg1)
+    message(STATUS "${arg1} = ${${arg1}}")
+    set(${arg1} 55 PARENT_SCOPE)
+endfunction(macro10 arg1)
+message(STATUS "globalvar before function = ${globalvar}")
+macro10(globalvar)
+message(STATUS "globalvar after macro = ${globalvar}")
+###########################################################################################
+#10-4- break and continue
+while(True)
+    message(STATUS "Hello")
+    break()
+    continue() #will not be executed, but if it's it will loop infinitly
+endwhile()
+###########################################################################################
+#10-5 execute_process
+execute_process(COMMAND "ls") #will execute command ls on terminal
+###########################################################################################
+#find package, download package using vcpkg to install any package similar to apt -install in linux
+#   .\vcpkg install pkgname:x64-windows
+#package (.cpp .hpp) -> build -> dll binary
+
  
