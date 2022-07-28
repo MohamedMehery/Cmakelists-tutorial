@@ -128,6 +128,19 @@ hellobinary/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/build
 .PHONY : hellobinary/fast
 
+#=============================================================================
+# Target rules for targets named mycustomtarget
+
+# Build rule for target.
+mycustomtarget: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 mycustomtarget
+.PHONY : mycustomtarget
+
+# fast build rule for target.
+mycustomtarget/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mycustomtarget.dir\build.make CMakeFiles/mycustomtarget.dir/build
+.PHONY : mycustomtarget/fast
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -184,6 +197,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... mycustomtarget
 	@echo ... hellobinary
 	@echo ... main.obj
 	@echo ... main.i

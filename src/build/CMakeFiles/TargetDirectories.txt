@@ -1,0 +1,3 @@
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/src/build/CMakeFiles/gtst.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/src/build/CMakeFiles/edit_cache.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/src/build/CMakeFiles/rebuild_cache.dir

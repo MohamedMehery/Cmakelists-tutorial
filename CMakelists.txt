@@ -148,11 +148,13 @@ target_include_directories(hellobinary PUBLIC inc/ lib/)
 # #STRINGS and REGEX to search something
 # FILE(STRINGS "main.cpp" MAIN_TXT REGEX "^int.") #will print the line of int main(void)
 # message("main file text:-\n${MAIN_TXT}")
-# #GLOB_RECURSE will search name of files
-# FILE(GLOB_RECURSE SRCS "*.cpp") #will print all .cpp files directories names in project
-# message("All cpp files:-\n${SRCS}") 
+# #GLOB_RECURSE will search name of files and put it in variable SRCS
+FILE(GLOB_RECURSE SRCS "*.cpp") #will print all .cpp files directories names in project
+#REGEX is regular expresion (some sort of script lang)
+STRING(REGEX REPLACE "C:/[^;]+Cmakelists-tutorial?" "" SRCS ${SRCS}) #replace all start from C:/ to Cmakelists-tutorial with none except ;
+message("All cpp files:-\n${SRCS}") 
 ###########################################################################################
-#10-2- STING command 
+#10-2- STRING command 
 FILE(READ "main.cpp" MAIN_TXT)
 STRING(REGEX REPLACE "int" "void" OUT ${MAIN_TXT}) 
 #message("All main.cpp file replace int with void:-\n${OUT}") 
@@ -184,10 +186,18 @@ while(True)
 endwhile()
 ###########################################################################################
 #10-5 execute_process
-execute_process(COMMAND "ls") #will execute command ls on terminal
+execute_process(COMMAND ls) #will execute command ls on terminal
 ###########################################################################################
 #find package, download package using vcpkg to install any package similar to apt -install in linux
 #   .\vcpkg install pkgname:x64-windows
 #package (.cpp .hpp) -> build -> dll binary
-
- 
+#in useage.txt of package, vendor will tell user to find_package() how to add it to cmake
+set(CMAKE_PREFIX_PATH "C:/Users/Mohamed Mehery/Downloads/Compressed/googletest/build")
+target_link_libraries(hellobinary PRIVATE gtest)
+target_link_libraries(hellobinary PRIVATE gtest_main)
+###########################################################################################
+add_custom_target( mycustomtarget       #adding custom target to main target (hellobinary)
+DEPENDS hellobinary                     #it depends on hellobinary
+COMMAND dir ..)     #when make generate hellobinary, i can "make mycustomtarget" to call this target   
+#recall cmake tutorial number 14,15 in which Eng made a custom target to flash and burn code avr
+###########################################################################################

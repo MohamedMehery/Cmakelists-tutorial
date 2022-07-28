@@ -3,7 +3,7 @@
 #include <algorithm>
 
 using namespace std;
-
+// this function is hackerrank quiz solution
 vector<int> permutationEquation(vector<int> p) {
     vector<int> result;
     for(auto x = 1 ; x <= p.size()  ; x++)
@@ -24,7 +24,7 @@ int main()
     auto result = permutationEquation(p);
     for(auto i : result)
     {
-        cout << "\t" << i <<endl;
+        cout << "\t" << i ;
     }
     cout <<endl;
 

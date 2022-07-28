@@ -542,3 +542,55 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/TDM-GCC-64/bin/mingw32-make.exe -f Makefile cmTC_24ce6/fast && C:/TDM-GCC-64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_24ce6.dir\build.make CMakeFiles/cmTC_24ce6.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_24ce6.dir/CheckIncludeFile.c.obj
+C:\TDM-GCC-64\bin\x86_64-w64-mingw32-gcc.exe    -o CMakeFiles\cmTC_24ce6.dir\CheckIncludeFile.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles\CMakeTmp\CheckIncludeFile.c"
+Linking C executable cmTC_24ce6.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_24ce6.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_24ce6.dir/objects.a
+C:\TDM-GCC-64\bin\ar.exe cr CMakeFiles\cmTC_24ce6.dir/objects.a @CMakeFiles\cmTC_24ce6.dir\objects1.rsp
+C:\TDM-GCC-64\bin\x86_64-w64-mingw32-gcc.exe -Wl,--whole-archive CMakeFiles\cmTC_24ce6.dir/objects.a -Wl,--no-whole-archive -o cmTC_24ce6.exe -Wl,--out-implib,libcmTC_24ce6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_24ce6.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD succeeded with the following output:
+Change Dir: C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/TDM-GCC-64/bin/mingw32-make.exe -f Makefile cmTC_3e3ad/fast && C:/TDM-GCC-64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_3e3ad.dir\build.make CMakeFiles/cmTC_3e3ad.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3e3ad.dir/src.c.obj
+C:\TDM-GCC-64\bin\x86_64-w64-mingw32-gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles\cmTC_3e3ad.dir\src.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles\CMakeTmp\src.c"
+Linking C executable cmTC_3e3ad.exe
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_3e3ad.dir\link.txt --verbose=1
+"C:\Program Files (x86)\CMake\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_3e3ad.dir/objects.a
+C:\TDM-GCC-64\bin\ar.exe cr CMakeFiles\cmTC_3e3ad.dir/objects.a @CMakeFiles\cmTC_3e3ad.dir\objects1.rsp
+C:\TDM-GCC-64\bin\x86_64-w64-mingw32-gcc.exe -Wl,--whole-archive CMakeFiles\cmTC_3e3ad.dir/objects.a -Wl,--no-whole-archive -o cmTC_3e3ad.exe -Wl,--out-implib,libcmTC_3e3ad.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_3e3ad.dir\linklibs.rsp
+mingw32-make.exe[1]: Leaving directory 'C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

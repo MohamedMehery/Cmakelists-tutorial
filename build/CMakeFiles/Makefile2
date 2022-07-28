@@ -71,6 +71,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/hellobinary.dir/clean
+clean: CMakeFiles/mycustomtarget.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -98,6 +99,32 @@ hellobinary: CMakeFiles/hellobinary.dir/rule
 CMakeFiles/hellobinary.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\hellobinary.dir\build.make CMakeFiles/hellobinary.dir/clean
 .PHONY : CMakeFiles/hellobinary.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/mycustomtarget.dir
+
+# All Build rule for target.
+CMakeFiles/mycustomtarget.dir/all: CMakeFiles/hellobinary.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mycustomtarget.dir\build.make CMakeFiles/mycustomtarget.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mycustomtarget.dir\build.make CMakeFiles/mycustomtarget.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" --progress-num= "Built target mycustomtarget"
+.PHONY : CMakeFiles/mycustomtarget.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/mycustomtarget.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/mycustomtarget.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\build\CMakeFiles" 0
+.PHONY : CMakeFiles/mycustomtarget.dir/rule
+
+# Convenience name for target.
+mycustomtarget: CMakeFiles/mycustomtarget.dir/rule
+.PHONY : mycustomtarget
+
+# clean rule for target.
+CMakeFiles/mycustomtarget.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\mycustomtarget.dir\build.make CMakeFiles/mycustomtarget.dir/clean
+.PHONY : CMakeFiles/mycustomtarget.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
