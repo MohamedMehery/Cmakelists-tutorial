@@ -35,22 +35,14 @@ struct Bankaccounttest : testing::Test
 {
     Bankaccount * B1;
 
-    Bankaccounttest()
+    void SetUp()
     {
         B1 = new Bankaccount;
     }
-
-    virtual ~Bankaccounttest()
+    virtual void TearDown()
     {
         delete B1;
-    }  
-
-    // void SetUp()
-    // {
-    // }
-    // void TearDown()
-    // {
-    // }
+    }
 };
 
 TEST_F(Bankaccounttest,bankaccountstart0)
@@ -65,7 +57,6 @@ struct accountstate
     int finalbalance;
     bool success;
 
-    
     friend ostream& operator<<(ostream & os, const accountstate & obj)
     {
         return os
@@ -76,7 +67,7 @@ struct accountstate
     }
 };
 // i faced a problem that gtest lib was build different compiler and the current code build with g++ -G "MinGW Makefiles"
-struct withdrawaccounttest :  testing::WithParamInterface<accountstate> , Bankaccounttest
+struct withdrawaccounttest :   Bankaccounttest, testing::WithParamInterface<accountstate> 
 {
     withdrawaccounttest()
     {
@@ -90,6 +81,8 @@ TEST_P(withdrawaccounttest , withdrawtest)
     auto success = B1->withdraw(as.withdraw_ammount) ;
     EXPECT_EQ(as.finalbalance , B1->balance);
     EXPECT_EQ(as.success , success);
+    EXPECT_EQ(as.initial_balance , 100);
+    EXPECT_LE(as.withdraw_ammount , as.finalbalance);
 }
 
 INSTANTIATE_TEST_CASE_P(Default, withdrawaccounttest , 

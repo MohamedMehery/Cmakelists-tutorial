@@ -1,3 +1,0 @@
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/executable/hellobinary.exe
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/hdr/lib.hpp
-C:/Users/Mohamed Mehery/Documents/GitHub/Cmakelists-tutorial/build/hdr/calc.hpp

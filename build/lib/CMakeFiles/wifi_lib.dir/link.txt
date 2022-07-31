@@ -1,2 +1,0 @@
-C:\TDM-GCC-64\bin\ar.exe qc libwifi_lib.a CMakeFiles/wifi_lib.dir/lib.cpp.obj
-C:\TDM-GCC-64\bin\ranlib.exe libwifi_lib.a

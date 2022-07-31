@@ -27,8 +27,11 @@ CMAKE_BUILD_TYPE:STRING=
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//Cpp Compiler
-CMAKE_CXX_COMPILER:STRING=g++
+//Cpp compiler
+CMAKE_CXX_COMPILE:STRING=g++
+
+//CXX compiler
+CMAKE_CXX_COMPILER:FILEPATH=C:/TDM-GCC-64/bin/g++.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler

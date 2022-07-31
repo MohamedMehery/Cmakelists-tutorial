@@ -116,6 +116,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named gmk
+
+# Build rule for target.
+gmk: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 gmk
+.PHONY : gmk
+
+# fast build rule for target.
+gmk/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gmk.dir\build.make CMakeFiles/gmk.dir/build
+.PHONY : gmk/fast
+
+#=============================================================================
 # Target rules for targets named gtst
 
 # Build rule for target.
@@ -127,6 +140,30 @@ gtst: cmake_check_build_system
 gtst/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\gtst.dir\build.make CMakeFiles/gtst.dir/build
 .PHONY : gtst/fast
+
+gmktest.obj: gmktest.cpp.obj
+.PHONY : gmktest.obj
+
+# target to build an object file
+gmktest.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gmk.dir\build.make CMakeFiles/gmk.dir/gmktest.cpp.obj
+.PHONY : gmktest.cpp.obj
+
+gmktest.i: gmktest.cpp.i
+.PHONY : gmktest.i
+
+# target to preprocess a source file
+gmktest.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gmk.dir\build.make CMakeFiles/gmk.dir/gmktest.cpp.i
+.PHONY : gmktest.cpp.i
+
+gmktest.s: gmktest.cpp.s
+.PHONY : gmktest.s
+
+# target to generate assembly for a file
+gmktest.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\gmk.dir\build.make CMakeFiles/gmk.dir/gmktest.cpp.s
+.PHONY : gmktest.cpp.s
 
 gtst.obj: gtst.cpp.obj
 .PHONY : gtst.obj
@@ -160,7 +197,11 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... gmk
 	@echo ... gtst
+	@echo ... gmktest.obj
+	@echo ... gmktest.i
+	@echo ... gmktest.s
 	@echo ... gtst.obj
 	@echo ... gtst.i
 	@echo ... gtst.s

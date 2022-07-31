@@ -72,15 +72,15 @@ CMakeFiles/gtst.dir/gtst.cpp.obj: CMakeFiles/gtst.dir/flags.make
 CMakeFiles/gtst.dir/gtst.cpp.obj: ../gtst.cpp
 CMakeFiles/gtst.dir/gtst.cpp.obj: CMakeFiles/gtst.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gtst.dir/gtst.cpp.obj"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gtst.dir/gtst.cpp.obj -MF CMakeFiles\gtst.dir\gtst.cpp.obj.d -o CMakeFiles\gtst.dir\gtst.cpp.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\gtst.cpp"
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gtst.dir/gtst.cpp.obj -MF CMakeFiles\gtst.dir\gtst.cpp.obj.d -o CMakeFiles\gtst.dir\gtst.cpp.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\gtst.cpp"
 
 CMakeFiles/gtst.dir/gtst.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gtst.dir/gtst.cpp.i"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\gtst.cpp" > CMakeFiles\gtst.dir\gtst.cpp.i
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\gtst.cpp" > CMakeFiles\gtst.dir\gtst.cpp.i
 
 CMakeFiles/gtst.dir/gtst.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gtst.dir/gtst.cpp.s"
-	g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\gtst.cpp" -o CMakeFiles\gtst.dir\gtst.cpp.s
+	C:\TDM-GCC-64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Cmakelists-tutorial\src\gtst.cpp" -o CMakeFiles\gtst.dir\gtst.cpp.s
 
 # Object files for target gtst
 gtst_OBJECTS = \

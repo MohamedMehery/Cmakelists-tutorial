@@ -1,4 +1,4 @@
-#include "binsearch.hpp"
+#include "../inc/binsearch.hpp"
 #include "../eigen3/eigen/Dense"
 
 using namespace std;
@@ -49,8 +49,8 @@ void linear_algebra(void)
 
 int main()
 {
-    //matrices_types_example();
-    linear_algebra();
+    matrices_types_example();
+    // linear_algebra();
 
     return 0;
 }
