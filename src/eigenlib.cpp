@@ -27,9 +27,12 @@ void matrices_types_example(void)
 
     Mxxx = MatrixXi::Random(4,12);
 
-    Gxxx = MatrixXd::Constant(4,16,1.6);
+    Gxxx = MatrixXd::Constant(4,4,2.5);
     cout << Mxxx << endl;
     cout << Gxxx << endl;
+
+    auto eigen_vector = Mxxx.eigenvalues();
+    cout << "Eigen vector of Mxxx = \n" << eigen_vector <<endl;
 }
 
 void linear_algebra(void)

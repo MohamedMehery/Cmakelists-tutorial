@@ -69,9 +69,13 @@ struct accountstate
 // i faced a problem that gtest lib was build different compiler and the current code build with g++ -G "MinGW Makefiles"
 struct withdrawaccounttest :   Bankaccounttest, testing::WithParamInterface<accountstate> 
 {
-    withdrawaccounttest()
+    void SetUp()
     {
         B1->balance = GetParam().initial_balance;
+    }
+    void TearDown()
+    {
+        // Do nothing
     }
 };
 
