@@ -1,6 +1,6 @@
-#include "binsearch.hpp"
-#include "calc.hpp"
-#include "lib.hpp"
+#include "inc/binsearch.hpp"
+#include "inc/calc.hpp"
+#include "lib/lib.hpp"
 #include <sstream>
 #include <stdio.h>
 //#include "defaultconfig.h"
@@ -13,10 +13,11 @@ int main(int argc , char ** argv)
 {
     testing::InitGoogleTest(&argc , argv);
 
-    int x = sum(5,3);
+    int x ;//= sum(5,3);
     stringstream ss;
     ss << x;
-    std::cout << "\tHello world\tsum output " << ss.str() << std::endl;
+    std::cout << "\tHello world\tsum output " << ss.str().length() << std::endl;
+
     //lib_init();
     ////////////////////////////////////////////////////////////////////
     // std::cout << "\tproduct_type " << product_type << endl;

@@ -44,6 +44,8 @@ j-i-h-g-f-e-d-c-b-a-b-c-d-e-f-g-h-i-j
 
 def print_rangoli(size):
     # your code goes here
+    if size > 26:
+        return 
     l = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     for rownum in range(size):
         for colmnum in range(size - rownum - 1):
@@ -74,10 +76,10 @@ def print_rangoli(size):
             print("--",end='')
             #   --
         for colmnum in range(size, 3*size - rownum - 1):
-            print(f"{l[size - 2 -(colmnum-size)]}-",end='')
+            print(f"{l[size - 1 -(colmnum-size)]}-",end='')
             #   a-z        
         for colmnum in reversed(range(size, 3*size - rownum - 2)):
-            print(f"{l[size - 2 - (colmnum-size)]}",end='')
+            print(f"{l[size - 1 - (colmnum-size)]}",end='')
             if ((colmnum < (2*size-1)) and (rownum > 0)):
                 print(f"-",end='')
 
